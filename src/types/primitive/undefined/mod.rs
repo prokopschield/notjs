@@ -4,7 +4,7 @@ use crate::{JsAny, JsValue};
 pub struct Undefined {}
 
 impl JsAny for Undefined {
-    fn as_value(self) -> JsValue
+    fn into_value(self) -> JsValue
     where
         Self: Sized + 'static,
     {

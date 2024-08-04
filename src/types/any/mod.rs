@@ -1,7 +1,7 @@
 use crate::JsValue;
 
 pub trait JsAny {
-    fn as_value(self) -> JsValue
+    fn into_value(self) -> JsValue
     where
         Self: Sized + 'static,
     {

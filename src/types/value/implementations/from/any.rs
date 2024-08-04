@@ -3,6 +3,6 @@ use crate::JsValue;
 
 impl<T: JsAny + 'static> From<T> for JsValue {
     fn from(value: T) -> Self {
-        value.as_value()
+        value.into_value()
     }
 }
