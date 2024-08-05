@@ -1,6 +1,6 @@
 use crate::JsAny;
 
-use super::{Boolean, Null, String, Symbol, Undefined};
+use super::{Boolean, Null, Number, String, Symbol, Undefined};
 
 pub mod implementations;
 
@@ -10,5 +10,6 @@ pub enum JsValue {
     Boolean(Boolean),
     String(String),
     Symbol(Symbol),
+    Number(Number),
     Unknown(Box<dyn JsAny>),
 }
