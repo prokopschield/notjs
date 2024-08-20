@@ -9,4 +9,11 @@ impl JsAny for String {
     {
         JsValue::String(self)
     }
+
+    fn to_number(&self) -> super::Number {
+        match self.parse() {
+            Ok(parsed) => parsed,
+            Err(_) => super::Number::NAN,
+        }
+    }
 }
