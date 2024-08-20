@@ -9,4 +9,8 @@ impl JsAny for BigInt {
     {
         JsValue::BigInt(self)
     }
+
+    fn to_number(&self) -> super::Number {
+        *self as super::Number
+    }
 }
