@@ -10,4 +10,8 @@ impl JsAny for Null {
     {
         JsValue::Null(self)
     }
+
+    fn to_number(&self) -> super::Number {
+        0 as super::Number
+    }
 }
