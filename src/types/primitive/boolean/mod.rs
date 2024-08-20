@@ -9,4 +9,12 @@ impl JsAny for Boolean {
     {
         JsValue::Boolean(self)
     }
+
+    fn to_number(&self) -> super::Number {
+        if *self {
+            1 as super::Number
+        } else {
+            0 as super::Number
+        }
+    }
 }
