@@ -9,4 +9,8 @@ impl JsAny for Number {
     {
         JsValue::Number(self)
     }
+
+    fn to_number(&self) -> Number {
+        *self
+    }
 }
