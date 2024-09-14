@@ -1,5 +1,3 @@
-use std::f64::NAN;
-
 use crate::JsValue;
 
 use super::Number;
@@ -13,6 +11,6 @@ pub trait JsAny {
     }
 
     fn to_number(&self) -> Number {
-        NAN
+        f64::NAN
     }
 }
